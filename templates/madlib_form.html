@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Madlib Form{% endblock %}
+{% block content %}
+    <h1>Madlib Form</h1>
+    {% for msg in get_flashed_messages() %}
+    <p>{{msg}}</p>
+    {% endfor %}
+    <form action ="/your-story">
+        <ul>
+            <li>
+                <label for="place">Enter a place</label>
+                <input id ="place" type='text' placeholder="Location" name ='place'>
+            </li>
+            <li>
+                <label for="noun">Enter a noun</label>
+                <input id='noun' type='text' placeholder="Thing" name="noun">
+            </li>
+            <li>
+                <label for="verb">Enter a verb</label>
+                <input id='verb' type='text' placeholder="Action Word" name="verb">
+            </li>
+            <li>
+                <label for="adjective">Enter an adjective</label>
+                <input id='adjective' type='text' placeholder="Description" name="adjective">
+            </li>
+            <li>
+                <label for="pnoun">Enter a plural noun</label>
+                <input id='pnoun' type='text' placeholder="Things" name="pnoun">
+            </li>
+            <br>
+            <button>Submit!</button>
+        </ul>
+    </form>
+{% endblock %}
